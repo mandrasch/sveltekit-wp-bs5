@@ -4,12 +4,16 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/sveltekit-wp-bootstrap5)
 
+Thanks to https://www.youtube.com/watch?v=Naz0Fv_VVQk
+
 ## How was this created?
 
 1. Create (empty) github repo without license/README
 1. Clone it to local harddrive, go to folder:
 1. Run `npm init svelte@next` in the new repo folder
 1. `npm install bootstrap` - install bootstrap5
+1. Run `npm i -D @sveltejs/adapter-static@next`, add
+1. Add to config, see here: https://github.com/sveltejs/kit/tree/master/packages/adapter-static#usage
 1. Added `.vscode/`-folder,`.github/`(action)-folder + `gitpod.yml` config
 
 ## How can you use this?
