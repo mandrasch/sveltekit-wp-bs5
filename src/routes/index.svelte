@@ -80,3 +80,7 @@
 		{/if}
 	</div>
 </div>
+
+<p>
+	Sample posts generated with FakerPress / Image source: unsplash (via Lorem Ipsum) or own photos
+</p>

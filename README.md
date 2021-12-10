@@ -5,8 +5,8 @@
 ## TODOs
 
 - [ ] Bugfix permalinks => manitu hosting installed them differently than standard, how can we automatically support them? (blog/2021/12/10/hello-world)
-- [ ] Fix internal links https://www.youtube.com/watch?v=Naz0Fv_VVQk
-- [ ] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
+- [ ] ⚠️ Fix internal links https://www.youtube.com/watch?v=Naz0Fv_VVQk
+- [x] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
 - [ ] Figure out pre-rendering and caching for sustainability
 - [ ] Figure out webhooks on render.com, netlify, vercel, deploynow, etc.
 - [ ] Figure out previews for editors?
