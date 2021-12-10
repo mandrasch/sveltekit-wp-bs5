@@ -1,0 +1,42 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      # we need two build steps because paths.base differs
+      # (GitHub Pages => deploys to subdirectory <user>.github.io/<repo>/)
+
+      - name: Install and Build for Github Pages 🔧
+        run: |
+          npm ci
+          npm run build
+        env:
+          PATHS_BASE: '/${{ github.event.repository.name }}'
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
+
+
+      # - name: Build again for SFTP transfer 🔧
+      #   run: |
+      #     npm run build
+      #   env:
+      #     PATHS_BASE: '' # deploy to (sub)domain root
+
+      # - name: 📂 Sync files via sftp
+      #   uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      #   with:
+      #     local-dir: ./build/
+      #     server: ${{ secrets.ftp_host }}
+      #     username: ${{ secrets.ftp_user }}
+      #     password: ${{ secrets.ftp_password }}
