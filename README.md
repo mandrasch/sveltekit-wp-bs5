@@ -8,8 +8,8 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 
 ## TODOs
 
-- [ ] Bugfix permalinks => manitu hosting installed them differently than standard, how can we automatically support them? (blog/2021/12/10/hello-world)
-- [ ] ⚠️ Fix internal links https://www.youtube.com/watch?v=Naz0Fv_VVQk
+- [ ] ⚠️ Bugfix permalinks and links to articles with base path => manitu hosting installed them differently than standard, how can we automatically support them? (e.g. blog/2021/12/10/hello-world)
+- [ ] ⚠️ Fix internal links in posts, see: https://www.youtube.com/watch?v=Naz0Fv_VVQk
 - [x] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
 - [ ] Figure out pre-rendering and caching for sustainability
 - [ ] Figure out webhooks on render.com, netlify, vercel, deploynow, etc.
@@ -35,14 +35,12 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 1. Add preprocess `npm install --save-dev svelte-preprocess`
 1. `npm install --save-dev sass postcss autoprefixer` for scss
 1. Add preprocess config for postcss autoprefixer & sass in config `svelte.config.js`
-1. Run `npm i --save-dev @sveltejs/adapter-static@next`, add
-1. Add to config, see here: https://github.com/sveltejs/kit/tree/master/packages/adapter-static#usage
+1. Run `npm i --save-dev @sveltejs/adapter-static@next`, add to config, see here: https://github.com/sveltejs/kit/tree/master/packages/adapter-static#usage
 1. Added `.vscode/`-folder,`.github/`(action)-folder + `gitpod.yml` config
 1. Add process.env.PATHS_BASE & dev to config
 1. Add `src/route/__layout.svelte` for scss and js loading
-1. Add gutenberg standard styles `npm install @wordpress/block-library --save`
-1. Add gutenberg standard styles to \_\_layout.svelte
-1. And most important: Add `static/.nojekyll` otherwise GitHub Pages won't work 🤦
+1. Add gutenberg standard styles `npm install @wordpress/block-library --save`, add them them to \_\_layout.svelte thanks to https://www.youtube.com/watch?v=Naz0Fv_VVQk
+1. And most importantly: Add `static/.nojekyll` otherwise GitHub Pages won't work!! 🤦
 
 Thanks to
 
