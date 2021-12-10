@@ -5,7 +5,7 @@ import adapter from '@sveltejs/adapter-static';
 import autoprefixer from 'autoprefixer';
 
 // from https://github.com/sveltejs/kit/tree/master/packages/adapter-static#github-pages
-const dev = process.env.NODE_ENV === 'development';
+const dev = process.env.NODE_ENV === 'development'; // TODO: use import.meta.env.MODE?
 
 const pathsBase = process.env.PATHS_BASE === undefined ? '' : process.env.PATHS_BASE;
 // github pages repo name, prefix for ghpages, because this will be hosted in subdirectory (e.g. '/<your-repo>')

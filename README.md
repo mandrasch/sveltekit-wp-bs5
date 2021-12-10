@@ -5,6 +5,7 @@
 ## TODOs
 
 - [ ] Fix internal links https://www.youtube.com/watch?v=Naz0Fv_VVQk
+- [ ] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
 - [ ] Figure out pre-rendering and caching for sustainability
 - [ ] Figure out previews for editors?
 - [ ] Figure out webhooks on render.com, netlify, vercel, deploynow, etc.
