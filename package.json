@@ -13,15 +13,20 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^1.0.0-next.21",
     "@sveltejs/kit": "next",
+    "autoprefixer": "^10.4.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
+    "postcss": "^8.4.4",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
-    "svelte": "^3.44.0"
+    "sass": "^1.44.0",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.9.8"
   },
   "type": "module",
   "dependencies": {
+    "@wordpress/block-library": "^6.0.13",
     "bootstrap": "^5.1.3"
   }
 }

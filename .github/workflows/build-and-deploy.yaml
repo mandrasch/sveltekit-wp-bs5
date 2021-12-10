@@ -19,6 +19,8 @@ jobs:
           npm run build
         env:
           PATHS_BASE: '/${{ github.event.repository.name }}'
+          VITE_PUBLIC_WORDPRESS_API_URL: ${{ secrets.wp_graphql_url }}
+          # e.g. https://my-wpblog.example.com/graphql
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
@@ -32,6 +34,7 @@ jobs:
       #     npm run build
       #   env:
       #     PATHS_BASE: '' # deploy to (sub)domain root
+      #      VITE_PUBLIC_WORDPRESS_API_URL: ${{ secrets.wp_graphql_url }}
 
       # - name: 📂 Sync files via sftp
       #   uses: SamKirkland/FTP-Deploy-Action@4.2.0
