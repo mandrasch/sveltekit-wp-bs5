@@ -2,6 +2,8 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/sveltekit-wp-bootstrap5)
 
+Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in order to connect a WordPress instance with WPGraphQL-plugin._
+
 ## TODOs
 
 - [ ] Bugfix permalinks => manitu hosting installed them differently than standard, how can we automatically support them? (blog/2021/12/10/hello-world)
