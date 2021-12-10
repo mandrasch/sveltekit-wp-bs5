@@ -9,17 +9,19 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-686d0d95.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-af0f2ef7.js">
-		<link rel="modulepreload" href="/_app/layout.svelte-39935a5a.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-06800479.js">
-		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="modulepreload" href="/sveltekit-wp-bootstrap5/_app/start-d44213f2.js">
+		<link rel="modulepreload" href="/sveltekit-wp-bootstrap5/_app/chunks/vendor-509e4c84.js">
+		<link rel="modulepreload" href="/sveltekit-wp-bootstrap5/_app/chunks/preload-helper-8b38a780.js">
+		<link rel="modulepreload" href="/sveltekit-wp-bootstrap5/_app/pages/__layout.svelte-7f5174df.js">
+		<link rel="modulepreload" href="/sveltekit-wp-bootstrap5/_app/pages/index.svelte-505be304.js">
+		<link rel="stylesheet" href="/sveltekit-wp-bootstrap5/_app/assets/start-c446e5f0.css">
+		<link rel="stylesheet" href="/sveltekit-wp-bootstrap5/_app/assets/pages/__layout.svelte-52387bb1.css">
 
 		<script type="module">
-			import { start } from "/_app/start-686d0d95.js";
+			import { start } from "/sveltekit-wp-bootstrap5/_app/start-d44213f2.js";
 			start({
 				target: document.querySelector("#svelte"),
-				paths: {"base":"","assets":""},
+				paths: {"base":"/sveltekit-wp-bootstrap5","assets":""},
 				session: {},
 				host: location.host,
 				route: true,
@@ -29,8 +31,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/layout.svelte-39935a5a.js"),
-						import("/_app/pages/index.svelte-06800479.js")
+						import("/sveltekit-wp-bootstrap5/_app/pages/__layout.svelte-7f5174df.js"),
+						import("/sveltekit-wp-bootstrap5/_app/pages/index.svelte-505be304.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -46,12 +48,21 @@
 		<div id="svelte">
 
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<main><div class="container"><div class="p-4 p-md-5 mb-4 text-white rounded bg-dark"><div class="col-md-6 px-0"><h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+			<p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
+				about what’s most interesting in this post’s contents.
+			</p>
+			<p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p></div></div>
+	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"><div class="col"><div class="card shadow-sm"><a href="/blog/hello-world/"><img src="https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/wp-content/uploads/2021/12/20210924_121437-scaled.jpeg" alt="" class="bd-placeholder-img card-img-top"></a>
+		<div class="card-body"><a href="/blog/hello-world/"><h2 class="card-title">Hello world! This post was made with gutenberg.</h2></a>
+			<p class="card-text"><!-- HTML_TAG_START --><p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing! 50 % Column 50 % Column Query loop:</p>
+<!-- HTML_TAG_END --></p>
+			<div class="d-flex justify-content-between align-items-center"><div class="btn-group"><a href="/blog/hello-world/" class="btn btn-sm btn-outline-secondary">View</a></div>
+				<small class="text-muted">9 mins</small></div></div></div></div></div></div></main>
 
 
 
-			
+			<script type="application/json" data-type="svelte-data" data-url="https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/graphql" data-body="13d4to9">{"status":200,"statusText":"OK","headers":{"access-control-allow-headers":"Authorization, Content-Type","access-control-allow-origin":"*","access-control-max-age":"600","connection":"close","content-length":"670","content-type":"application/json; charset=UTF-8","date":"Fri, 10 Dec 2021 18:13:52 GMT","server":"Apache","strict-transport-security":"max-age=31536000; includeSubDomains","x-content-type-options":"nosniff","x-robots-tag":"noindex"},"body":"{\"data\":{\"posts\":{\"nodes\":[{\"databaseId\":1,\"uri\":\"\\\u002Fhello-world\\\u002F\",\"title\":\"Hello world! This post was made with gutenberg.\",\"excerpt\":\"\u003Cp\u003EWelcome to WordPress. This is your first post. Edit or delete it, then start writing! 50 % Column 50 % Column Query loop:\u003C\\\u002Fp\u003E\\n\",\"date\":\"2021-12-10T17:39:47\",\"featuredImage\":{\"node\":{\"sourceUrl\":\"https:\\\u002F\\\u002Fsveltekit-wp-bootstrap5-backend.mandrasch.eu\\\u002Fwp-content\\\u002Fuploads\\\u002F2021\\\u002F12\\\u002F20210924_121437-scaled.jpeg\",\"altText\":\"\",\"mediaDetails\":{\"width\":1920,\"height\":2560}}}}]}},\"extensions\":{\"debug\":[{\"type\":\"DEBUG_LOGS_INACTIVE\",\"message\":\"GraphQL Debug logging is not active. To see debug logs, GRAPHQL_DEBUG must be enabled.\"}]}}"}</script>
 		</div>
 	</body>
 </html>
