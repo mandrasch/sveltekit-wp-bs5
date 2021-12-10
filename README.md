@@ -38,6 +38,7 @@
 1. Add `src/route/__layout.svelte` for scss and js loading
 1. Add gutenberg standard styles `npm install @wordpress/block-library --save`
 1. Add gutenberg standard styles to \_\_layout.svelte
+1. And most important: Add `.nojekyll` otherwise GitHub Pages won't work 🤦
 
 Thanks to
 
