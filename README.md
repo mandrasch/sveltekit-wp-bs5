@@ -56,11 +56,11 @@ As backend you need to connect a wordpress instance. Use for example DDEV or loc
 1. Install https://wordpress.org/plugins/wp-graphql/
 1. Add fake data via https://de.wordpress.org/plugins/fakerpress/ e.g. (unfortunately no gutenberg support) or https://artisanthemes.io/sample-content-blocks-gutenberg/ (needs a lot of rework)
 
-#### Develop your frontend with SvelteKit 🧡
+### Develop your frontend with SvelteKit 🧡
 
 Below are the official SvelteKit instructions for the frontend:
 
-### Developing
+#### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -71,7 +71,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-### Building
+#### Building
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
