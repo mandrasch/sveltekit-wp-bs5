@@ -48,11 +48,15 @@ Thanks to
 
 ## How can you use this?
 
+### Setup a wordpress (locally or live) with wpgraphql-plugin
+
 As backend you need to connect a wordpress instance. Use for example DDEV or local for local development.
 
 1. Create `.env.local`, just copy `env.local.example`.
 1. Install https://wordpress.org/plugins/wp-graphql/
 1. Add fake data via https://de.wordpress.org/plugins/fakerpress/ e.g. (unfortunately no gutenberg support) or https://artisanthemes.io/sample-content-blocks-gutenberg/ (needs a lot of rework)
+
+#### Develop your frontend with SvelteKit 🧡
 
 Below are the official SvelteKit instructions for the frontend:
 
