@@ -59,13 +59,14 @@
 </script>
 
 <script>
+	import { base } from '$app/paths';
 	export let post;
 	const formatDate = (date) => new Date(date).toLocaleDateString();
 	const categories = post.categories?.nodes?.map((category) => category.name) ?? [];
 </script>
 
 <div class="container-sm" style="max-width:650px;">
-	<a href="/" class="blog-link">&#8592; Blog</a>
+	<a href={`${base}/`} class="blog-link">&#8592; Blog</a>
 	<article>
 		{#if post.featuredImage}
 			<img src={post.featuredImage.node.sourceUrl} alt={post.featuredImage.node.altText} />

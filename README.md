@@ -11,7 +11,7 @@ Big thanks to Kellen Mace for sharing [Intro to Headless WordPress with SvelteKi
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/sveltekit-wp-bootstrap5)
 
-Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in order to connect a WordPress instance with WPGraphQL-plugin._
+Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in order to connect a WordPress instance with WPGraphQL-plugin. Use CTRL + c to abort and run `npm run dev` afterwards again._
 
 ## Use it locally
 
