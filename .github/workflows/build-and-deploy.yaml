@@ -18,7 +18,7 @@ jobs:
           npm ci
           npm run build
         env:
-          PATHS_BASE: '/${{ github.event.repository.name }}'
+          VITE_PATHS_BASE: '/${{ github.event.repository.name }}'
           VITE_PUBLIC_WORDPRESS_API_URL: ${{ secrets.wp_graphql_url }}
           # e.g. https://my-wpblog.example.com/graphql
 
@@ -33,8 +33,8 @@ jobs:
       #   run: |
       #     npm run build
       #   env:
-      #     PATHS_BASE: '' # deploy to (sub)domain root
-      #      VITE_PUBLIC_WORDPRESS_API_URL: ${{ secrets.wp_graphql_url }}
+      #     VITE_PATHS_BASE: '' # deploy to (sub)domain root
+      #     VITE_PUBLIC_WORDPRESS_API_URL: ${{ secrets.wp_graphql_url }}
 
       # - name: 📂 Sync files via sftp
       #   uses: SamKirkland/FTP-Deploy-Action@4.2.0

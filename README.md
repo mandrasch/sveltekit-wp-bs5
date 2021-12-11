@@ -14,10 +14,11 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 - [ ] Figure out pre-rendering and caching for sustainability
 - [ ] Figure out webhooks on render.com, netlify, vercel, deploynow, etc.
 - [ ] Figure out previews for editors?
-- [ ] Figure out how to use 2-click-media embeds
-- [ ] Figure out how to deal with cookies
+- [ ] Figure out how to use 2-click-media embeds (GDPR / Privacy)
+- [ ] Figure out how to deal with cookies (GDPR / Privacy)
 - [ ] Figure out how to deal with images / where to host them, include them in static build?
-- [ ] Use bootstrap navbar & footer (with content from WP?)
+- [ ] Use bootstrap navbar & footer (with content - and settings from WP?)
+- [ ] Use aliases? https://codingcat.dev/post/make-pathing-easier-with-aliases-in-sveltekit
 - [ ] Get featured blog post for hero section
 - [ ] Try out adapter-node as well
 - [ ] Add wordpress graphql api in .env via GitHub action secret
@@ -25,6 +26,7 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 - [ ] Try out Custom Post Types UI (has built in support for graphql 🥳)
 - [ ] Try out https://de.wordpress.org/plugins/headless-mode/
 - [ ] Try out yoast & graphql
+- [ ] Figure out how to exclude README.md from pipeline process, site doesn't need to be re-generated if I commit a README change 🌱
 
 ## How was this created?
 
