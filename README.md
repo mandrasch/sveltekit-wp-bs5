@@ -21,6 +21,9 @@ See ["How can you use this"](#how-can-you-use-this) below.
 
 Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable) node hosting with `@sveltejs/adapter-node` on providers like render.com in future.
 
+- a) `@sveltejs/adapter-static` - static generation, only HTML/JS/CSS is delivered to the user. If WordPress content changes, a Webhook must be called (via https://de.wordpress.org/plugins/wp-webhooks/ for example) to trigger a new build
+- b) `@sveltejs/adapter-node`, e.g. via nodeJS hosting - not explored this yet, for sustainability there is also prerendering / static generation involved (See: https://twitter.com/KellenMace/status/1469044771729690624)
+
 ### How was this created?
 
 1. Create (empty) github repo without license/README
