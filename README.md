@@ -2,39 +2,26 @@
 
 Experimental learning project, connecting a SvelteKit-frontend (made with bootstrap5) to a WordPress backend via WPGraphQL-plugin. This is called a 'headless WordPress'-setup. It's work in progress.
 
+- Live-Demo: [mandrasch.github.io/sveltekit-wp-bs5/](https://mandrasch.github.io/sveltekit-wp-bs5/)
+- WordPress : [WP-Backend](https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/) (can later be hidden and redirected to SvelteKit-frontend)
+
+Big thanks to Kellen Mace for sharing [Intro to Headless WordPress with SvelteKit](https://www.youtube.com/watch?v=94FZvB6B_c0) and [Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk)!
+
+## Try it out in Gitpod
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/sveltekit-wp-bootstrap5)
 
 Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in order to connect a WordPress instance with WPGraphQL-plugin._
 
+## Use it locally
+
+See ["How can you use this"](##how-can-you-use-this) below.
+
+## Technical background
+
 Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable) node hosting with `@sveltejs/adapter-node` on providers like render.com in future.
 
-Big thanks to [Kellen Mace -
-Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk)
-
-## TODOs
-
-- [ ] ⚠️ Bugfix permalinks and links to articles with base path => manitu hosting installed them differently than standard, how can we automatically support them? (e.g. blog/2021/12/10/hello-world)
-- [ ] ⚠️ Fix internal links in posts, see: https://www.youtube.com/watch?v=Naz0Fv_VVQk
-- [x] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
-- [ ] Figure out pre-rendering and caching for sustainability
-- [ ] Figure out webhooks on render.com, netlify, vercel, deploynow, etc.
-- [ ] Figure out previews for editors?
-- [ ] Figure out how to use 2-click-media embeds (GDPR / Privacy)
-- [ ] Figure out how to deal with cookies (GDPR / Privacy)
-- [ ] Figure out how to deal with images / where to host them, include them in static build?
-- [ ] Use bootstrap navbar & footer (with content - and settings from WP?)
-- [ ] Use aliases? https://codingcat.dev/post/make-pathing-easier-with-aliases-in-sveltekit
-- [ ] Get featured blog post for hero section
-- [ ] Try out adapter-node as well
-- [ ] Add wordpress graphql api in .env via GitHub action secret
-- [ ] Try out ACF & graphql acf
-- [ ] Try out Custom Post Types UI (has built in support for graphql 🥳)
-- [ ] Try out https://de.wordpress.org/plugins/headless-mode/
-- [ ] Try out yoast & graphql
-- [ ] Figure out how to exclude README.md from pipeline process, site doesn't need to be re-generated if I commit a README change 🌱
-- [ ] Provide DDEV WordPress auto-install, so everything can be launched on Gitpod (see [DDEV Gitpod launcher](https://github.com/drud/ddev-gitpod-launcher)) 🚀
-
-## How was this created?
+### How was this created?
 
 1. Create (empty) github repo without license/README
 1. Clone it to local harddrive, go to folder:
@@ -95,3 +82,27 @@ npm run build
 ```
 
 > You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+
+## TODOs
+
+- [ ] ⚠️ Bugfix permalinks and links to articles with base path => manitu hosting installed them differently than standard, how can we automatically support them? (e.g. blog/2021/12/10/hello-world)
+- [ ] ⚠️ Fix internal links in posts, see: https://www.youtube.com/watch?v=Naz0Fv_VVQk
+- [x] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
+- [ ] Figure out pre-rendering and caching for sustainability
+  - See: https://twitter.com/m_andrasch/status/1468899046488256519
+- [ ] Figure out webhooks on render.com, netlify, vercel, deploynow, etc.
+- [ ] Figure out previews for editors?
+- [ ] Figure out how to use 2-click-media embeds (GDPR / Privacy)
+- [ ] Figure out how to deal with cookies (GDPR / Privacy)
+- [ ] Figure out how to deal with images / where to host them, include them in static build?
+- [ ] Use bootstrap navbar & footer (with content - and settings from WP?)
+- [ ] Use aliases? https://codingcat.dev/post/make-pathing-easier-with-aliases-in-sveltekit
+- [ ] Get featured blog post for hero section
+- [ ] Try out adapter-node as well
+- [ ] Add wordpress graphql api in .env via GitHub action secret
+- [ ] Try out ACF & graphql acf
+- [ ] Try out Custom Post Types UI (has built in support for graphql 🥳)
+- [ ] Try out https://de.wordpress.org/plugins/headless-mode/
+- [ ] Try out yoast & graphql
+- [ ] Figure out how to exclude README.md from pipeline process, site doesn't need to be re-generated if I commit a README change 🌱
+- [ ] Provide DDEV WordPress auto-install, so everything can be launched on Gitpod (see [DDEV Gitpod launcher](https://github.com/drud/ddev-gitpod-launcher)) 🚀
