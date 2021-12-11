@@ -15,7 +15,7 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 
 ## Use it locally
 
-See ["How can you use this"](##how-can-you-use-this) below.
+See ["How can you use this"](#how-can-you-use-this) below.
 
 ## Technical background
 
