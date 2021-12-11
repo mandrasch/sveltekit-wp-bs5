@@ -1,10 +1,15 @@
 # sveltekit-wp-bs5
 
-Experimental project, connecting a SvelteKit-frontend (made with bootstrap5) to a WordPress backend via WPGraphQL-plugin. This is called a 'headless WordPress'-setup.
+Experimental learning project, connecting a SvelteKit-frontend (made with bootstrap5) to a WordPress backend via WPGraphQL-plugin. This is called a 'headless WordPress'-setup. It's work in progress.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/sveltekit-wp-bootstrap5)
 
 Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in order to connect a WordPress instance with WPGraphQL-plugin._
+
+Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable) node hosting with `@sveltejs/adapter-node` on providers like render.com in future.
+
+Big thanks to [Kellen Mace -
+Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk)
 
 ## TODOs
 
@@ -27,6 +32,7 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 - [ ] Try out https://de.wordpress.org/plugins/headless-mode/
 - [ ] Try out yoast & graphql
 - [ ] Figure out how to exclude README.md from pipeline process, site doesn't need to be re-generated if I commit a README change 🌱
+- [ ] Provide DDEV WordPress auto-install, so everything can be launched on Gitpod (see [DDEV Gitpod launcher](https://github.com/drud/ddev-gitpod-launcher)) 🚀
 
 ## How was this created?
 
@@ -44,7 +50,7 @@ Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in ord
 1. Add gutenberg standard styles `npm install @wordpress/block-library --save`, add them them to \_\_layout.svelte thanks to https://www.youtube.com/watch?v=Naz0Fv_VVQk
 1. And most importantly: Add `static/.nojekyll` otherwise GitHub Pages won't work!! 🤦
 
-Thanks to
+Big thanks to
 
 - https://www.youtube.com/watch?v=Naz0Fv_VVQk
 - https://github.com/Dax89/electron-sveltekit#bootstrap-5-and-fontawesome-support
@@ -52,15 +58,20 @@ Thanks to
 
 ## How can you use this?
 
-### Setup a wordpress (locally or live) with wpgraphql-plugin
+### Setup a wordpress (locally or live)
 
-As backend you need to connect a wordpress instance. Use for example DDEV or local for local development.
+As backend you need to connect a wordpress instance. Use for example [DDEV](https://ddev.readthedocs.io/en/stable/users/cli-usage/#wordpress-quickstart) or [local](https://localwp.com/) for a local wordpress instance.
 
-1. Create `.env.local`, just copy `env.local.example`.
-1. Install https://wordpress.org/plugins/wp-graphql/
+1. Install WordPress
+1. Install plugin https://wordpress.org/plugins/wp-graphql/
 1. Add fake data via https://de.wordpress.org/plugins/fakerpress/ e.g. (unfortunately no gutenberg support) or https://artisanthemes.io/sample-content-blocks-gutenberg/ (needs a lot of rework)
 
-### Develop your frontend with SvelteKit 🧡
+### Develop your SvelteKit-frontend 🧡
+
+1. Clone this repo
+1. Run `npm install`
+1. Create `.env.local` (just copy `env.local.example`) and insert your wordpress URL, e.g. `https://mywp-site.xyz/graphql`
+1. Run `npm run dev`
 
 Below are the official SvelteKit instructions for the frontend:
 
