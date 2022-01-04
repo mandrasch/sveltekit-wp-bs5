@@ -5,7 +5,10 @@ Experimental learning project, connecting a SvelteKit-frontend (made with bootst
 - Live-Demo: [mandrasch.github.io/sveltekit-wp-bs5/](https://mandrasch.github.io/sveltekit-wp-bs5/)
 - WordPress : [WP-Backend](https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/) (can later be hidden and redirected to SvelteKit-frontend)
 
-Big thanks to Kellen Mace for sharing [Intro to Headless WordPress with SvelteKit](https://www.youtube.com/watch?v=94FZvB6B_c0) and [Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk)!
+Big thanks to 
+
+- Kellen Mace for sharing [Intro to Headless WordPress with SvelteKit](https://www.youtube.com/watch?v=94FZvB6B_c0) and [Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk)!
+- Jason Bahl for providing https://www.wpgraphql.com/ and https://www.wpgraphql.com/acf/
 
 ## Try it out in Gitpod
 
