@@ -41,6 +41,7 @@ Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable
 - [ ] Get featured blog post for hero section
 - [ ] Try out adapter-node as well
 - [ ] Add wordpress graphql api in .env via GitHub action secret
+- [ ] Try out Atlas Content Modeler
 - [ ] Try out ACF & graphql acf
 - [ ] Try out Custom Post Types UI (has built in support for graphql 🥳)
 - [ ] Try out https://de.wordpress.org/plugins/headless-mode/
