@@ -8,7 +8,7 @@ import autoprefixer from 'autoprefixer';
 const dev = process.env.NODE_ENV === 'development'; // TODO: use import.meta.env.MODE?
 
 // import.meta.env is undefined here - why?
-const pathsBase = process.env.NODE_ENV === undefined ? '' : process.env.NODE_ENV;
+const pathsBase = process.env.VITE_PATHS_BASE === undefined ? '' : process.env.VITE_PATHS_BASE;
 //console.log('process.env', process.env);
 
 // quick workaround for local testing for github pages subdirectory deployment
