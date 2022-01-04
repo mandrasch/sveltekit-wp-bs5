@@ -29,7 +29,7 @@
         }
       }
     `;
-	export async function load({ page, fetch }) {
+	export async function load({ params, fetch }) {
 		const response = await fetch(import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL, {
 			method: 'POST',
 			headers: {
@@ -38,7 +38,7 @@
 			body: JSON.stringify({
 				query,
 				variables: {
-					slug: page.params.slug
+					slug: params.slug
 				}
 			})
 		});

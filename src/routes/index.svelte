@@ -73,7 +73,6 @@
 			headers: {
 				'Content-Type': 'application/json'
 			},
-
 			// TODO: Is this a good way to batch these requests?
 			body: JSON.stringify([
 				{
@@ -91,8 +90,8 @@
 		if (response.ok) {
 			const responseObj = await response.json();
 
-			console.log('ResponseObj:', responseObj);
-			console.dir(responseObj, { depth: null });
+			// uncomment for debug:
+			// console.dir(responseObj, { depth: null });
 
 			const posts = responseObj[0].data.posts.nodes;
 			const heroData = responseObj[1].data.nodeByUri.heroFrontPage; // from ACF
@@ -111,7 +110,7 @@
 				console.log('Replaced link', heroData.button1.url);
 			}
 
-			console.log('Returning heroData', heroData);
+			// console.log('Returning heroData', heroData);
 			return {
 				props: {
 					posts,
