@@ -5,10 +5,30 @@ Experimental learning project, connecting a SvelteKit-frontend (made with bootst
 - Live-Demo: [mandrasch.github.io/sveltekit-wp-bs5/](https://mandrasch.github.io/sveltekit-wp-bs5/)
 - WordPress : [WP-Backend](https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/) (can later be hidden and redirected to SvelteKit-frontend)
 
-Big thanks to 
+## Stack / tutorials:
 
-- Kellen Mace for sharing [Intro to Headless WordPress with SvelteKit](https://www.youtube.com/watch?v=94FZvB6B_c0) and [Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk)!
+** Frontend **
+
+- SvelteKit
+- bootstrap5
+
+** Backend / Wordpress: **
+
+- https://wordpress.org/plugins/wp-graphql/
+- https://de.wordpress.org/plugins/advanced-custom-fields/
+- https://www.wpgraphql.com/acf/
+- https://de.wordpress.org/plugins/custom-post-type-ui/
+
+Big thanks to
+
+- Kellen Mace for sharing [Intro to Headless WordPress with SvelteKit](https://www.youtube.com/watch?v=94FZvB6B_c0) (and [Gutenberg in Headless WordPress: Render Blocks as HTML](https://www.youtube.com/watch?v=Naz0Fv_VVQk))!
 - Jason Bahl for providing https://www.wpgraphql.com/ and https://www.wpgraphql.com/acf/
+  - https://www.wpgraphql.com/2021/12/23/query-any-page-by-its-path-using-wpgraphql/
+  - https://www.youtube.com/watch?v=rIg4MHc8elg
+- the WordPress community
+- https://www.youtube.com/watch?v=Naz0Fv_VVQk
+- https://github.com/Dax89/electron-sveltekit#bootstrap-5-and-fontawesome-support
+- https://github.com/mylastore/svelte-kit/blob/main/src/lib/Nav.svelte#L19
 
 ## Try it out in Gitpod
 
@@ -29,6 +49,7 @@ Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable
 
 ## TODOs
 
+- [ ] Implement a function which routes to post or pages (https://www.wpgraphql.com/2021/12/23/query-any-page-by-its-path-using-wpgraphql/) for ACF link field
 - [ ] ⚠️ Bugfix permalinks and links to articles with base path => manitu hosting installed them differently than standard, how can we automatically support them? (e.g. blog/2021/12/10/hello-world)
 - [ ] ⚠️ Fix internal links in posts, see: https://www.youtube.com/watch?v=Naz0Fv_VVQk
 - [x] Figure out how to test the production build with other .env url via .env.production? https://timdeschryver.dev/blog/environment-variables-with-sveltekit
@@ -70,13 +91,9 @@ Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable
 
 Big thanks to
 
-- https://www.youtube.com/watch?v=Naz0Fv_VVQk
-- https://github.com/Dax89/electron-sveltekit#bootstrap-5-and-fontawesome-support
-- https://github.com/mylastore/svelte-kit/blob/main/src/lib/Nav.svelte#L19
-
 ## How can you use this?
 
-### Setup a wordpress (locally or live)
+### 1. Setup a wordpress (locally or live)
 
 As backend you need to connect a wordpress instance. Use for example [DDEV](https://ddev.readthedocs.io/en/stable/users/cli-usage/#wordpress-quickstart) or [local](https://localwp.com/) for a local wordpress instance.
 
@@ -84,7 +101,7 @@ As backend you need to connect a wordpress instance. Use for example [DDEV](http
 1. Install plugin https://wordpress.org/plugins/wp-graphql/
 1. Add fake data via https://de.wordpress.org/plugins/fakerpress/ e.g. (unfortunately no gutenberg support) or https://artisanthemes.io/sample-content-blocks-gutenberg/ (needs a lot of rework)
 
-### Develop your SvelteKit-frontend 🧡
+### 2. Develop your SvelteKit-frontend 🧡
 
 1. Clone this repo
 1. Run `npm install`
