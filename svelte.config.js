@@ -8,16 +8,17 @@ import autoprefixer from 'autoprefixer';
 const dev = process.env.NODE_ENV === 'development'; // TODO: use import.meta.env.MODE?
 
 // import.meta.env is undefined here - why?
-// const pathsBase = import.meta.env.VITE_PATHS_BASE === undefined ? '' : import.meta.env.VITE_PATHS_BASE;
+const pathsBase =
+	import.meta.env.VITE_PATHS_BASE === undefined ? '' : import.meta.env.VITE_PATHS_BASE;
 //console.log('process.env', process.env);
 
 // quick workaround for local testing for github pages subdirectory deployment
-var pathsBase = '';
+/*var pathsBase = '';
 if (process.env.NODE_ENV === 'production' && process.env.VITE_PATHS_BASE === undefined) {
 	pathsBase = '/subdirectory-test';
 } else {
 	pathsBase = process.env.VITE_PATHS_BASE === undefined ? '' : process.env.VITE_PATHS_BASE;
-}
+}*/
 
 console.log('Building with pathsBase setting ...', pathsBase);
 // github pages repo name, prefix for ghpages, because this will be hosted in subdirectory (e.g. '/<your-repo>')
