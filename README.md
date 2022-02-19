@@ -30,7 +30,7 @@ ddev wp rewrite structure '/%postname%/'
 
 - 👷‍♂️ TODO: https://github.com/matepaiva/wp-graphql-crb needs to be installed as well, right now only possible with composer?
 - 👷‍♂️ TODO / decide: Use (classic editor) or use Gutenberg (rich, but complex?)? `ddev wp plugin --activate classic-editor`
-- 👷‍♂️ TODO / decide: Use atlas-content-modeler (not working with git currently) or cpt-ui (types generation can be exported to PHP? `ddev wp plugin --activate custom-post-type-ui`)
+- 👷‍♂️ TODO / decide: Use atlas-content-modeler (how can we store json for data model in git?) or cpt-ui (types generation can be exported to PHP? `ddev wp plugin --activate custom-post-type-ui`)
 
 Afterwards you only need to run 
 ```
