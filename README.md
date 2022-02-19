@@ -44,7 +44,7 @@ cd frontend/
 npm install
 ```
 
-`env.local` already exists, just run 
+`.env.local` already exists, just run 
 ```
 npm run dev
 ``` 
