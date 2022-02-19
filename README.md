@@ -2,12 +2,16 @@
 
 Experimental learning project, connecting a SvelteKit-frontend (made with bootstrap5) to a WordPress backend via WPGraphQL-plugin. This is called a 'headless WordPress'-setup. It's work in progress.
 
-- Goal: Use only open source plugins
+- New goal: Use only open source plugins
 - Status: 🚧 Work in progress, currently conversion to monorepo and experiment with carbon fields usage 🚧 
+
+- Live-Demo: [mandrasch.github.io/sveltekit-wp-bs5/](https://mandrasch.github.io/sveltekit-wp-bs5/)
+- WordPress : [WP-Backend](https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/) (can later be hidden completely)
+- 📺 Teaser-Video: https://www.youtube.com/watch?v=gqRaN8Bojv0 (ACF might be replaced with carbon fields or similiar)
 
 ## Local Development Setup
 
-**Backend (via DDEV)**
+## Backend (via DDEV)
 
 First time install (see [WordPress quickstart](https://ddev.readthedocs.io/en/stable/users/cli-usage/#wordpress-quickstart)): 
 ```
@@ -32,7 +36,7 @@ Afterwards you only need to run
 ddev start
 ```
 
-**Frontend**
+## Frontend (SvelteKit)
 
 ```bash
 cd frontend/
