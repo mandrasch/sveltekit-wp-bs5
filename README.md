@@ -24,11 +24,13 @@ ddev wp plugin install --activate https://carbonfields.net/zip/latest/
 ddev wp rewrite structure '/%postname%/'
 ```
 
-TODO: 
-- https://github.com/matepaiva/wp-graphql-crb needs to be installed as well, right now only possible with composer?
-- support not only postname permalink structure in sveltekit?
 
-Afterwards you only need to run `ddev start`.
+- 👷‍♂️ TODO: https://github.com/matepaiva/wp-graphql-crb needs to be installed as well, right now only possible with composer?
+
+Afterwards you only need to run 
+```
+ddev start
+```
 
 **Frontend**
 
@@ -37,17 +39,23 @@ cd frontend/
 npm install
 ```
 
-`env.local` already exists, just run `npm run dev` to start local development.
+`env.local` already exists, just run 
+```
+npm run dev
+``` 
+
+to start local development.
 
 ### TODO / missing features
 
 - [ ] Custom fields - https://carbonfields.net/? https://www.wpgraphql.com/extenstion-plugins/wpgraphql-for-carbon-fields/?
 - [ ] Multilang (Open Source option available? Has to work with custom fields)
 - [ ] Permissions (Restrict custom types to clients/roles, let users own entries?!)
+- 👷‍♂️ TODO: support not only postname permalink structure in sveltekit?
 
 <hr>
 
-## Notes
+## Notes (maybe outdated)
 
 ### Stack / tutorials:
 
