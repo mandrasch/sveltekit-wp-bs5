@@ -1,15 +1,20 @@
+# TODO: this needs a rework, launch DDEV as well
+
 # Source: https://github.com/gitpod-io/template-sveltekit/blob/main/.gitpod.yml
 # Learn more about this Gitpod configuration file in the documentation at https://www.gitpod.io/docs/configuration
 #
 ports:
-  - port: 3000
+  - port: 3001
     onOpen: open-preview
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/config-start-tasks
 tasks:
-  - init: npm install
+  - init: |
+      cd frontend/
+      npm install
     command: |
-      export HMR_HOST=`gp url 3000`
+      cd frontend/
+      export HMR_HOST=`gp url 3001`
       npm run dev
 github:
   prebuilds:
