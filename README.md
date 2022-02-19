@@ -11,7 +11,7 @@ Experimental learning project, connecting a SvelteKit-frontend (made with bootst
 
 ## Local Development Setup
 
-## Backend (via DDEV)
+### Backend (via DDEV)
 
 First time install (see [WordPress quickstart](https://ddev.readthedocs.io/en/stable/users/cli-usage/#wordpress-quickstart)): 
 ```
@@ -36,7 +36,7 @@ Afterwards you only need to run
 ddev start
 ```
 
-## Frontend (SvelteKit)
+### Frontend (SvelteKit)
 
 ```bash
 cd frontend/
