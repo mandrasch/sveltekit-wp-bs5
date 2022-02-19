@@ -7,6 +7,32 @@ Experimental learning project, connecting a SvelteKit-frontend (made with bootst
 
 📺 Teaser-Video: https://www.youtube.com/watch?v=gqRaN8Bojv0
 
+## Setup frontend
+
+
+
+## Setup backend via DDEV
+
+First time install (see [WordPress quickstart](https://ddev.readthedocs.io/en/stable/users/cli-usage/#wordpress-quickstart)): 
+```
+cd wp-backend/
+ddev start
+ddev exec wp core download
+ddev launch
+```
+
+After installation, setup the graphql plugins:
+
+```
+ddev wp plugin install --activate classic-editor wp-graphql custom-post-type-ui atlas-content-modeler
+```
+
+### TODO/Missing
+
+- [ ] Multilang (Open Source?)
+- [ ] Permissions (Restrict to clients)
+
+
 ## Stack / tutorials:
 
 ** Frontend **
@@ -48,6 +74,8 @@ Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable
 
 - a) `@sveltejs/adapter-static` - static generation, only HTML/JS/CSS is delivered to the user. If WordPress content changes, a Webhook must be called (via https://de.wordpress.org/plugins/wp-webhooks/ for example) to trigger a new build
 - b) `@sveltejs/adapter-node`, e.g. via nodeJS hosting - not explored this yet, for sustainability there is also prerendering / static generation involved (See: https://twitter.com/KellenMace/status/1469044771729690624)
+
+
 
 ## TODOs
 
