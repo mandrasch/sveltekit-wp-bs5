@@ -23,13 +23,14 @@ After installation, setup our child theme and graphql plugins (via WPCLI):
 
 ```
 ddev wp theme activate twentytwentytwo-child
-ddev wp plugin install --activate wp-graphql classic-editor custom-post-type-ui atlas-content-modeler
+ddev wp plugin install --activate wp-graphql atlas-content-modeler
 ddev wp plugin install --activate https://carbonfields.net/zip/latest/
 ddev wp rewrite structure '/%postname%/'
 ```
 
-
 - 👷‍♂️ TODO: https://github.com/matepaiva/wp-graphql-crb needs to be installed as well, right now only possible with composer?
+- 👷‍♂️ TODO / decide: Use (classic editor) or use Gutenberg (rich, but complex?)? `ddev wp plugin --activate classic-editor`
+- 👷‍♂️ TODO / decide: Use atlas-content-modeler (not working with git currently) or cpt-ui (types generation can be exported to PHP?)
 
 Afterwards you only need to run 
 ```
@@ -56,7 +57,6 @@ to start local development.
 - [ ] Multilang (Open Source option available? Has to work with custom fields)
 - [ ] Permissions (Restrict custom types to clients/roles, let users own entries?!)
 - [ ] Support not only postname permalink structure in sveltekit
-- [ ] Use (classic editor) or use Gutenberg (rich, but complex?)?
 
 <hr>
 
