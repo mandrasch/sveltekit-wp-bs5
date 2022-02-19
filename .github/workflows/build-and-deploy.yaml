@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+    # Sustainability: Don't trigger frontend build for updated README
+    paths-ignore:
+      - "**/README.md"
+      - "wp-backend/**"
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

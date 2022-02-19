@@ -91,15 +91,16 @@
 			const responseObj = await response.json();
 
 			// uncomment for debug:
-			// console.dir(responseObj, { depth: null });
+			console.dir(responseObj, { depth: null });
 
 			const posts = responseObj[0].data.posts.nodes;
-			const heroData = responseObj[1].data.nodeByUri.heroFrontPage; // from ACF
+			// TODO: convert to carbon fields
+			//const heroData = responseObj[1].data.nodeByUri?.heroFrontPage; // from ACF
 
 			// fix internal links - quick & dirty! 🤦
 			// TODO: implement better and more robust link replacement fn for fixing internal links (won't be always /graphql)
 			// see https://www.youtube.com/watch?v=Naz0Fv_VVQk&t=479s as well
-			if (heroData.button1.url != undefined) {
+			/*if (heroData.button1.url != undefined) {
 				let wpDomain = import.meta.env.VITE_PUBLIC_WORDPRESS_API_URL;
 				wpDomain = wpDomain.replace(/\/graphql/g, ''); // TODO: This can be something else as well! (Can be configured in settings of wpgraphql)
 				wpDomain = wpDomain.replace('http://', '');
@@ -108,13 +109,13 @@
 				heroData.button1.url = heroData.button1.url.replace('https://', '').replace('http://', '');
 				heroData.button1.url = heroData.button1.url.replace(wpDomain, 'http://localhost:3000'); // TODO: how to get current domain reliable?
 				console.log('Replaced link', heroData.button1.url);
-			}
+			}*/
 
 			// console.log('Returning heroData', heroData);
 			return {
 				props: {
 					posts,
-					heroData
+					//heroData
 				}
 			};
 		}
@@ -133,7 +134,7 @@
 </script>
 
 <div class="container">
-	<Hero {heroData} />
+	<!-- <Hero {heroData} /> -->
 	<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
 		<div class="col-md-6 px-0">
 			<h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
@@ -155,6 +156,6 @@
 	</div>
 </div>
 
-<p>
+<p class="text-center mt-5">
 	Sample posts generated with FakerPress / Image source: unsplash (via Lorem Ipsum) or own photos
 </p>

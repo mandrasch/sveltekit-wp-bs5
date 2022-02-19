@@ -2,38 +2,54 @@
 
 Experimental learning project, connecting a SvelteKit-frontend (made with bootstrap5) to a WordPress backend via WPGraphQL-plugin. This is called a 'headless WordPress'-setup. It's work in progress.
 
-- Live-Demo: [mandrasch.github.io/sveltekit-wp-bs5/](https://mandrasch.github.io/sveltekit-wp-bs5/)
-- WordPress : [WP-Backend](https://sveltekit-wp-bootstrap5-backend.mandrasch.eu/) (can later be hidden and redirected to SvelteKit-frontend)
+- Goal: Use only open source plugins
+- Status: 🚧 Work in progress, currently conversion to monorepo and experiment with carbon fields usage 🚧 
 
-📺 Teaser-Video: https://www.youtube.com/watch?v=gqRaN8Bojv0
+## Local Development Setup
 
-## Setup frontend
-
-
-
-## Setup backend via DDEV
+**Backend (via DDEV)**
 
 First time install (see [WordPress quickstart](https://ddev.readthedocs.io/en/stable/users/cli-usage/#wordpress-quickstart)): 
 ```
 cd wp-backend/
-ddev start
-ddev exec wp core download
-ddev launch
+ddev start && ddev exec wp core download && ddev launch
 ```
 
-After installation, setup the graphql plugins:
+After installation, setup our child theme and graphql plugins (via WPCLI):
 
 ```
-ddev wp plugin install --activate classic-editor wp-graphql custom-post-type-ui atlas-content-modeler
+ddev wp theme activate twentytwentytwo-child
+ddev wp plugin install --activate wp-graphql classic-editor custom-post-type-ui atlas-content-modeler
+ddev wp plugin install --activate https://carbonfields.net/zip/latest/
+ddev wp rewrite structure '/%postname%/'
 ```
 
-### TODO/Missing
+TODO: 
+- https://github.com/matepaiva/wp-graphql-crb needs to be installed as well, right now only possible with composer?
+- support not only postname permalink structure in sveltekit?
 
-- [ ] Multilang (Open Source?)
-- [ ] Permissions (Restrict to clients)
+Afterwards you only need to run `ddev start`.
 
+**Frontend**
 
-## Stack / tutorials:
+```bash
+cd frontend/
+npm install
+```
+
+`env.local` already exists, just run `npm run dev` to start local development.
+
+### TODO / missing features
+
+- [ ] Custom fields - https://carbonfields.net/? https://www.wpgraphql.com/extenstion-plugins/wpgraphql-for-carbon-fields/?
+- [ ] Multilang (Open Source option available? Has to work with custom fields)
+- [ ] Permissions (Restrict custom types to clients/roles, let users own entries?!)
+
+<hr>
+
+## Notes
+
+### Stack / tutorials:
 
 ** Frontend **
 
@@ -58,17 +74,17 @@ Big thanks to
 - https://github.com/Dax89/electron-sveltekit#bootstrap-5-and-fontawesome-support
 - https://github.com/mylastore/svelte-kit/blob/main/src/lib/Nav.svelte#L19
 
-## Try it out in Gitpod
+### Try it out in Gitpod
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/mandrasch/sveltekit-wp-bootstrap5)
 
 Note for Gitpod: _You must create `.env.local` (see `.env.local.example`) in order to connect a WordPress instance with WPGraphQL-plugin. Use CTRL + c to abort and run `npm run dev` afterwards again._
 
-## Use it locally
+### Use it locally
 
 See ["How can you use this"](#how-can-you-use-this) below.
 
-## Technical background
+### Technical background
 
 Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable) node hosting with `@sveltejs/adapter-node` on providers like render.com in future.
 
@@ -77,7 +93,7 @@ Currently I use `@sveltejs/adapter-static`, but I also want to test (sustainable
 
 
 
-## TODOs
+### TODOs
 
 - [ ] Implement a function which routes to post or pages (https://www.wpgraphql.com/2021/12/23/query-any-page-by-its-path-using-wpgraphql/) for ACF link field
 - [ ] ⚠️ Bugfix permalinks and links to articles with base path => manitu hosting installed them differently than standard, how can we automatically support them? (e.g. blog/2021/12/10/hello-world)
