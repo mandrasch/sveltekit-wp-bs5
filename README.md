@@ -55,7 +55,8 @@ to start local development.
 - [ ] Custom fields - https://carbonfields.net/? https://www.wpgraphql.com/extenstion-plugins/wpgraphql-for-carbon-fields/?
 - [ ] Multilang (Open Source option available? Has to work with custom fields)
 - [ ] Permissions (Restrict custom types to clients/roles, let users own entries?!)
-- 👷‍♂️ TODO: support not only postname permalink structure in sveltekit?
+- [ ] Support not only postname permalink structure in sveltekit
+- [ ] Use (classic editor) or use Gutenberg (rich, but complex?)?
 
 <hr>
 
