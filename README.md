@@ -1,3 +1,5 @@
+February 2023: See my other experiment as well with WordPress REST API, https://github.com/mandrasch/sveltekit-pico-headless-wp
+
 # sveltekit-wp-bs5
 
 Experimental learning project, connecting a SvelteKit-frontend (made with bootstrap5) to a WordPress backend via WPGraphQL-plugin. This is called a 'headless WordPress'-setup. It's work in progress.
